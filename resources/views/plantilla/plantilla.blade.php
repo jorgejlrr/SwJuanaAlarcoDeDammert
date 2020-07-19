@@ -208,7 +208,7 @@
     </div>
     <footer class="app-footer">
       <div class="ml-auto">
-        <span> <a href="https://www.facebook.com/innovasystec">Innovasystec</a> - Copyright &copy; 2020.</span>
+        <span><a href="https://www.facebook.com/innovasystec" target="_blank">Innovasystec</a> - Copyright &copy; 2020.</span>
       </div>
     </footer>
     <!-- CoreUI and necessary plugins-->
