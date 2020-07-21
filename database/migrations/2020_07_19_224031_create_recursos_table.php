@@ -13,9 +13,14 @@ class CreateRecursosTable extends Migration
      */
     public function up()
     {
-        Schema::create('recursos', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::create('recurso', function (Blueprint $table) {
+            $table->bigIncrements('rec_id');
+            $table->integer('rec_curso');
+            $table->integer('rec_bimestre');
+            $table->string('rec_archivo',180);
+            $table->string('rec_dni',9);
+            $table->integer('rec_rol');
+            $table->timestamp('rec_fechahora');
         });
     }
 

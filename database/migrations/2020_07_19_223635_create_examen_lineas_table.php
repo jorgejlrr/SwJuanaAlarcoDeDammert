@@ -13,9 +13,13 @@ class CreateExamenLineasTable extends Migration
      */
     public function up()
     {
-        Schema::create('examen_lineas', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::create('examen_linea', function (Blueprint $table) {
+            $table->bigIncrements('exa_id');
+            $table->integer('exa_idcurso');
+            $table->string('exa_titulo',100);
+            $table->text('exa_link');
+            $table->integer('exa_iddocen');
+            $table->timestamp('exa_fecha');
         });
     }
 

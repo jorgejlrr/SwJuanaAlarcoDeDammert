@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTrabajadorsTable extends Migration
+class CreateAsignaturaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -36,6 +36,6 @@ class CreateTrabajadorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trabajadors');
+        Schema::dropIfExists('asignatura');
     }
 }

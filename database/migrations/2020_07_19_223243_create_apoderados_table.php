@@ -13,9 +13,16 @@ class CreateApoderadosTable extends Migration
      */
     public function up()
     {
-        Schema::create('apoderados', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::create('apoderado', function (Blueprint $table) {
+            $table->increments('apod_id');
+            $table->string('apod_dni',8);
+            $table->string('apod_ape',70);
+            $table->string('apod_nom',70);
+            $table->integer('apod_sexo');
+            $table->string('apod_email',70)->nullable();
+            $table->string('apod_tel',11)->nullable();
+
+            $table->unique('apod_dni');
         });
     }
 

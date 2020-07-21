@@ -13,9 +13,10 @@ class CreateAlumnoCursosTable extends Migration
      */
     public function up()
     {
-        Schema::create('alumno_cursos', function (Blueprint $table) {
+        Schema::create('alumno_curso', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->integer('curso_id');
+            $table->integer('alumno_id');
         });
     }
 

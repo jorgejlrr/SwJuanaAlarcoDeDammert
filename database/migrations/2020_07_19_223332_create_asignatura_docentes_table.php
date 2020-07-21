@@ -13,9 +13,10 @@ class CreateAsignaturaDocentesTable extends Migration
      */
     public function up()
     {
-        Schema::create('asignatura_docentes', function (Blueprint $table) {
+        Schema::create('asignatura_docente', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->integer('trab_id');
+            $table->integer('asig_id');
         });
     }
 

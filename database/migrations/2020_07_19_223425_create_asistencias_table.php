@@ -13,9 +13,12 @@ class CreateAsistenciasTable extends Migration
      */
     public function up()
     {
-        Schema::create('asistencias', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::create('asistencia', function (Blueprint $table) {
+            $table->bigIncrements('asis_id');
+            $table->integer('asis_idcurso');
+            $table->integer('asis_idalumno');
+            $table->date('asis_fecha');
+            $table->integer('asis_est');
         });
     }
 
