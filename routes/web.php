@@ -20,20 +20,20 @@ Auth::routes(['reset'=>false]);
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Rutas de los controladores
-Route::resource('administrador','AdministradorController');
-Route::resource('apoderado','ApoderadoController');
-Route::resource('alumno','AlumnoController');
-Route::resource('docente','DocenteController');
-Route::resource('secretaria','SecretariaController');
-Route::resource('curso','CursoController');
-Route::resource('ac','AlumnoCursoController');
-Route::resource('asistencia','AsistenciaController');
-Route::resource('notas','NotasController');
-Route::resource('examen','ExamenLineaController');
-Route::resource('pago','PagoController');
-Route::resource('encuesta','EncuestaController');
-Route::resource('video','VideoController');
-Route::resource('recvideo','RecVideoController');
+Route::resource('administrador','AdministradorController')->middleware('auth');;
+Route::resource('apoderado','ApoderadoController')->middleware('auth');;
+Route::resource('alumno','AlumnoController')->middleware('auth');;
+Route::resource('docente','DocenteController')->middleware('auth');;
+Route::resource('secretaria','SecretariaController')->middleware('auth');;
+Route::resource('curso','CursoController')->middleware('auth');;
+Route::resource('ac','AlumnoCursoController')->middleware('auth');;
+Route::resource('asistencia','AsistenciaController')->middleware('auth');;
+Route::resource('notas','NotasController')->middleware('auth');;
+Route::resource('examen','ExamenLineaController')->middleware('auth');;
+Route::resource('pago','PagoController')->middleware('auth');;
+Route::resource('encuesta','EncuestaController')->middleware('auth');;
+Route::resource('video','VideoController')->middleware('auth');;
+Route::resource('recvideo','RecVideoController')->middleware('auth');;
 
 // Rutas del docente
 Route::get('cursos/{id}','DocenteController@misCursos');
